@@ -73,7 +73,7 @@ public class BenefitService {
              }
          }).distinct().toList();
 
-         List<BenefitEntity> benefits = benefitRepository.findBySupplierEnterprise_IdIn(partnershipIds);
+         List<BenefitEntity> benefits = benefitRepository.findBySupplierEnterpriseIdIn(partnershipIds);
 
          List<BenefitResponse> responses = benefits.stream().map( b -> new BenefitResponse(b.getId(),b.getDescription(),b.getSupplierEnterprise().getEnterprise(), b.getCategory())).toList();
 

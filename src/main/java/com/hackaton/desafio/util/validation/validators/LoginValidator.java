@@ -2,7 +2,9 @@ package com.hackaton.desafio.util.validation.validators;
 
 import com.hackaton.desafio.dto.authDTO.LoginRequest;
 import com.hackaton.desafio.util.validation.Validator;
+import org.springframework.stereotype.Component;
 
+@Component
 public class LoginValidator implements Validator<LoginRequest> {
 
     @Override
